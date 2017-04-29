@@ -1,0 +1,189 @@
+@CHARSET "ISO-8859-1";
+
+* {
+	box-sizing: border-box;
+	font-family: 'Avenir', Arial, sans-serif;
+}
+
+/* ---------------------------------------Top Image-----------------------------------------*/
+#header {
+	background-color: white;
+	left: 0;
+	top: 0;
+}
+
+@media only screen and (max-width:991px) {
+	.big {
+		display: none;
+	}
+	.small {
+		max-width: 30%;
+		max-height: auto;
+		border-radius: 4px;
+		padding: 5px;
+		align: left;
+		left: 50%;
+	}
+}
+
+@media only screen and (min-width:992px) {
+	.small {
+		display: none;
+	}
+	.big {
+		max-width: 100%;
+		max-height: auto;
+		border-radius: 4px;
+		padding: 5px;
+		align: middle;
+	}
+}
+
+.header {
+	max-width: 10%;
+	max-height: auto;
+}
+
+/* ---------------------------------------Navigation----------------------------------------*/
+ul.sidenav {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	width: 15%;
+	background-color: red;
+	position: fixed;
+	height: 100%;
+	overflow: auto;
+}
+
+ul.sidenav li a {
+	display: block;
+	color: white;
+	padding: 8px 16px;
+	text-decoration: none;
+}
+
+ul.sidenav li a.active {
+	background-color: #b30000;
+	color: white;
+}
+
+ul.sidenav li a:hover:not(.active) {
+background-color:black;
+color:white;
+}
+
+div.content {
+	margin-left: 15%;
+	padding: 1px 16px;
+	height: 1000px;
+}
+
+@media screen and (max-width: 991px) {
+	ul.sidenav {
+		width: 100%;
+		height: auto;
+		position: relative;
+	}
+	ul.sidenav li a {
+		float: left;
+		padding: 15px;
+	}
+	div.content {
+		margin-left: 0;
+	}
+}
+
+@media screen and (max-width: 400px) {
+	ul.sidenav li a {
+		text-align: center;
+		float: none;
+	}
+}
+/* -----------------------------------------------------------------------------------------*/
+body {
+	margin: 0;
+}
+
+h1 {
+	/*iets regelen zodat de fontgrootte meeschaalt*/
+	text-align: center;
+	font-size: 100%;
+}
+
+h2 {
+	/* iets regelen zodat de fontgroote meeschaalt*/
+	text-align: center;
+	font-size: 80%;
+}
+
+/*------------------------------------hyperlinks---------------------------------------*/
+
+/*opmaak registreer hyperlink (misschien veranderen in knop?)*/
+.hyperlink {
+	text-align: center;
+}
+
+a:link.hyperlink {
+	color: #FF0000;
+	background-color: transparent;
+	text-decoration: none
+}
+
+a:visited.hyperlink {
+	color: #FF0000;
+	background-color: transparent;
+	text-decoration: none
+}
+
+a:hover.hyperlink {
+	color: #FE2E2E;
+	background-color: transparent;
+	text-decoration: none
+}
+
+a:active.hyperlink {
+	color: #FE2E2E;
+	background-color: transparent;
+	text-decoration: none
+}
+
+/*------------------------------------Form---------------------------------------*/
+.form{ text-align: center}
+.input {
+	padding: 12px 10px;
+	margin: 10px 0;
+	display: block;
+	border: 1px solid black;
+	border-radius: 4px;
+	padding: 12px 10px;
+	margin: auto;
+}
+
+input[type=submit] {
+	background-color: #FF0000;
+	color: white;
+	padding: 14px 10px;
+	margin: 8px 0;
+	border: 1px solid #FE2E2E;
+	border-radius: 4px;
+	cursor: pointer;
+	margin: auto;
+	display: block;
+}
+
+@media only screen and (max-width: 991px) {
+	.input {width: 90%;}
+	input[type=submit] {width: 90%;}
+}
+
+@media only screen and (min-width: 992px) {
+	.input {width: 512px;}
+	input[type=submit] {width: 512px;}
+}
+
+
+input[type=submit]:hover {
+	background-color: #FE2E2E;
+	border: 1px solid #FF0000;
+}
